@@ -19,7 +19,7 @@ export const details={
         val1:"Skills",
         val2:"nav-link skills"
       },{
-        val1:"Work",
+        val1:"Project",
         val2:"nav-link projects"
       },{
         val1:"Contact",
@@ -121,7 +121,7 @@ export const details={
             type:"Collaborative",
             tech:["HTML","CSS","JavaScript","BootStrap"],
             img: Tanishque,
-            description:"This project is a clone of the Tanishq, a popular retail store. The goal of this project is to recreate the visual layout."
+            description:"This project is a clone of the Tanishq, a popular retail store which gives accessories and Jewellery. The goal of this project is to recreate the visual layout."
         },
         {
             name:"World Heath Organization",

@@ -33,7 +33,7 @@ const Work = () => {
             <Box sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }} >
                 <Zoom in={checked2}>
 
-                    <Typography variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Work</Typography>
+                    <Typography variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Project</Typography>
                 </Zoom>
             </Box>
             <Box className='projectContainer' sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", justifyContent: "center", marginTop: "5%", flexWrap: "wrap", padding: '0' }}>
@@ -44,7 +44,7 @@ const Work = () => {
                             <ListItem key={index} style={{ display: "block" }}>
                                 <Zoom in={checked1}>
                                     <Box className='project-card' sx={{ display: "grid", gap: "15px", backgroundColor: "#204829", padding: "10px 10px", borderRadius: "5px", width: "100%", margin: "auto", height: "100%" }}>
-                                      
+
                                         <img src={ele.img} className='projectImage' width={"100%"} />
                                         <Box className='projectDescription' sx={{ height: "100%" }} >
                                             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
