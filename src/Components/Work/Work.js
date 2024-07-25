@@ -33,7 +33,7 @@ const Work = () => {
             <Box sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }} >
                 <Zoom in={checked2}>
 
-                    <Typography variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Project</Typography>
+                    <Typography variant='h4' sx={{ color: "#bfd94a", backgroundColor: "#0b0217", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "monospace" }} >Project</Typography>
                 </Zoom>
             </Box>
             <Box className='projectContainer' sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", justifyContent: "center", marginTop: "5%", flexWrap: "wrap", padding: '0' }}>
@@ -49,7 +49,7 @@ const Work = () => {
                                         <Box className='projectDescription' sx={{ height: "100%" }} >
                                             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                                                 <a style={{ textDecoration: "none" }} href={ele.github} target="_blank">
-                                                    <Typography className="project-title" sx={{ color: "#00D837", fontFamily: "Poppins" }} variant='h5'>{ele.name}</Typography>
+                                                    <Typography className="project-title" sx={{ color: "#00D837", fontFamily: "monospace" }} variant='h5'>{ele.name}</Typography>
                                                 </a>
                                                 <Box className='iconBox' sx={{ display: "flex", justifyContent: "space-between", width: "14%" }}>
                                                     <a className="project-github-link" style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.3rem" }} href={ele.github} target={"_blank"} ><i className="fa-brands fa-github"></i></a>

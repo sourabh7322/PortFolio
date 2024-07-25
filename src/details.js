@@ -1,6 +1,6 @@
 import LMS from './media/LMS.png'
 
-import WHO from './media/WHO.png'
+
 import BeyondBoundaries from './media/BeyondBoundaries.png'
 import Tanishque from './media/Tanishque.png'
 
@@ -53,10 +53,7 @@ export const details={
                 name:"React",
                 img:"https://img.icons8.com/office/512/react.png"
             },
-            {
-                name:"Material UI",
-                img:"https://img.icons8.com/color/512/material-ui.png"
-            },
+           
             {
                 name:"Chakra UI",
                 img:"https://img.icons8.com/color/512/chakra-ui.png"

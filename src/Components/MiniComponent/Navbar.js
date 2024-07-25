@@ -1,13 +1,18 @@
-import { Box, Button, Drawer, List, ListItem, ListItemText, Slide, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+// Navbar.js
+import { Box, Button, Drawer, List, ListItem, ListItemText, Slide, Typography, IconButton } from "@mui/material";
+import React, { useEffect, useState, useContext } from "react";
 import LinearDeterminate from "./ProgressComp";
 import "./Navbar.css";
 import { details } from "../../details";
-import Resume from '../../media/Resume-Sourabh.pdf'
+import Resume from '../../media/Resume-Sourabh.pdf';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-scroll';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { ThemeContext } from '../../ThemeContext'; // Import ThemeContext
 
 const Navbar = ({ scrollHandle }) => {
+  const { darkMode, toggleTheme } = useContext(ThemeContext); // Access context values
   const [checked, setChecked] = useState(false);
   const [hoverEffect, setHoverEffect] = useState(0);
   const [scrolled, setScrolled] = useState(0);
@@ -15,17 +20,17 @@ const Navbar = ({ scrollHandle }) => {
 
   const handleDrawerToggle = () => {
     setOpen(!open);
-  }
+  };
 
   const introLoaded = () => {
     setTimeout(() => {
       setChecked(true);
-    }, 600)
-  }
+    }, 600);
+  };
 
   useEffect(() => {
     introLoaded();
-  }, [])
+  }, []);
 
   const openResume = () => {
     window.open(
@@ -56,7 +61,9 @@ const Navbar = ({ scrollHandle }) => {
         padding: "5px 1%",
         position: "sticky",
         top: "0%",
-        zIndex: "10"
+        zIndex: "10",
+        backgroundColor: darkMode ? "#333" : "#fff", // Background color based on theme
+        color: darkMode ? "#fff" : "#333", // Text color based on theme
       }}
     >
       <Box
@@ -66,10 +73,12 @@ const Navbar = ({ scrollHandle }) => {
           display: "flex",
           alignItems: "center",
           gap: "5px",
-          color: "white",
+          color: darkMode ? "#bfd94a" : "#333", // Color based on theme
         }}
       >
-        <Typography sx={{ color: "#008F11", fontFamily: "Poppins", fontSize: "2rem", fontWeight: '500', textShadow: "0 10px 10px white" }} variant='h1'></Typography>
+        <Typography sx={{ fontFamily: "monospace", fontSize: "2rem", fontWeight: '500', textShadow: darkMode ? "0 10px 10px white" : "0 10px 10px black" }} variant='h1'>
+          My Portfolio
+        </Typography>
       </Box>
       <Box className="logoBox" sx={{ display: "none" }}>
       </Box>
@@ -79,7 +88,6 @@ const Navbar = ({ scrollHandle }) => {
         sx={{
           display: "flex",
           width: "80%",
-          color: "white",
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -101,7 +109,7 @@ const Navbar = ({ scrollHandle }) => {
                   onMouseOut={() => setHoverEffect(0)}
                   onMouseOver={() => setHoverEffect(index + 1)}
                 >
-                  <Typography className={ele?.val2} variant="h5" sx={{ fontSize: "1.1rem", fontFamily: "Poppins", color: '#00FF41' }}>{ele.val1}</Typography>
+                  <Typography className={ele?.val2} variant="h5" sx={{ fontSize: "1.1rem", fontFamily: "monospace", color: darkMode ? '#bfd94a' : '#333' }}>{ele.val1}</Typography>
                   {hoverEffect === index + 1 ? (
                     <LinearDeterminate color={"white"} />
                   ) : (
@@ -119,26 +127,26 @@ const Navbar = ({ scrollHandle }) => {
               download={Resume}
               id="resume-button-1"
               sx={{
-                border: "1px solid #008F11",
-                color: "#00FF41",
+                border: darkMode ? "1px solid #bfd94a" : "1px solid #333",
+                color: darkMode ? "#bfd94a" : "#333",
                 fontSize: "0.8rem",
-                fontFamily: "Poppins",
+                fontFamily: "monospace",
               }}>Resume</Button>
           </a>
 
           <LinearDeterminate color={"transparent"} />
         </Box>
 
-        <Box className="ham" sx={{ display: "none", color: "#00FF41" }} >
+        <Box className="ham" sx={{ display: "none", color: darkMode ? "#bfd94a" : "#333" }} >
           <MenuOutlinedIcon onClick={handleDrawerToggle} />
           <Drawer
             sx={{
-              width: 300, // Set the desired width
+              width: 300,
               flexShrink: 0,
               '& .MuiDrawer-paper': {
-                width: 300, // Set the desired width
-                backgroundColor: '#07160f', // Set the desired background color
-                color: '#00FF41',
+                width: 300,
+                backgroundColor: darkMode ? '#333' : '#fff',
+                color: darkMode ? '#bfd94a' : '#333',
               },
             }}
             variant="temporary"
@@ -165,6 +173,10 @@ const Navbar = ({ scrollHandle }) => {
             </List>
           </Drawer>
         </Box>
+
+        <IconButton sx={{ ml: 1, color: darkMode ? "#bfd94a" : "#333" }} onClick={toggleTheme}>
+          {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
       </Box>
     </Box>
   );

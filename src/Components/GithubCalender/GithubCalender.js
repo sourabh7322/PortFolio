@@ -5,11 +5,11 @@ import GitHubCalendar from "react-github-calendar";
 export default function GithubCalender() {
   return (
     <>
-      <Typography className='contactheading' sx={{ textAlign: "center", fontWeight: "600", color: "#00FF41", marginBottom: "2%", fontFamily: "Poppins" }} variant='h2' >My Contributions</Typography>
-      <Box sx={{ textAlign: "center", width: "fit-content", margin: "auto auto 0% auto", color: "#00FF41", borderRadius: "8px", padding: "3% 1%", border: "2px solid #008F11" }}>
+      <Typography className='contactheading' sx={{ textAlign: "center", fontWeight: "600", color: "#bfd94a", marginBottom: "2%", fontFamily: "Poppins" }} variant='h2' >My Contributions</Typography>
+      <Box sx={{ textAlign: "center", width: "fit-content", margin: "auto auto 0% auto", color: "#bfd94a", borderRadius: "8px", padding: "3% 1%", border: "2px solid #bfd94a" }}>
         <GitHubCalendar
           className="react-activity-calendar"
-          color="#00FF41"
+          color="#4488db"
           username="sourabh7322" />
 
       </Box>

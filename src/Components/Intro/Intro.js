@@ -38,7 +38,7 @@ const Intro = () => {
         <Box className='headingContainer' sx={{cursor:"pointer",width:"fit-content"}} onMouseOut={()=>{SetHoverEffect(0)}} onMouseOver={()=>SetHoverEffect(1)}>
             <Zoom  in={checked}>
                 {/* <Typography className="heading1" sx={{color:"rgb(191,201,232)",fontFamily:"Poppins",fontSize:"6rem",fontWeight:'600'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography> */}
-                <Typography id="user-detail-name" className="heading1" sx={{color:"#008F11",fontFamily:"Poppins",fontSize:"6rem",fontWeight:'600'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography>
+                <Typography id="user-detail-name" className="heading1" sx={{color:"#bfd94a",fontFamily:"Poppins",fontSize:"7rem",fontWeight:'800'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography>
                 
             </Zoom>
             
@@ -48,10 +48,10 @@ const Intro = () => {
             
             /> */}
             {/* <Typography id="subHeading" className='heading1' sx={{color:"rgb(136,146,176)",fontFamily:"Poppins",fontSize:"4rem"}} variant='h1'></Typography> */}
-            <Typography id="subHeading" className='heading1' sx={{color:"#00FF41",fontFamily:"Poppins",fontSize:"4rem"}} variant='h1'></Typography>
+            <Typography id="subHeading" className='heading1' sx={{color:"#bfd94a",fontFamily:"monospace",fontSize:"4rem"}} variant='h1'></Typography>
         </Zoom>
         <Zoom  in={checked}>
-            <Typography id="user-detail-intro" className='intro' sx={{color:"#00FF41",fontFamily:"Poppins",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I’m a Full Stack Web Developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products.</Typography>
+            <Typography id="user-detail-intro" className='intro' sx={{color:"#bfd94a",fontFamily:"monospace",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I’m a Full Stack Web Developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products.</Typography>
         </Zoom>
         <Scroll offset={-150} type="class" element={details.className[3]}>
             <Zoom in={checked}>
@@ -59,13 +59,13 @@ const Intro = () => {
                 <Button 
                 className='goToButton'
                 sx={{
-                    border: "1px solid #008F11",
-                    color: "#00FF41",
+                    border: "1px solid #a39e56",
+                    color: "#bfd94a",
                     fontSize: "1rem",
                     marginTop:"4%",
                     padding:"1%",
-                    fontFamily:"Poppins"
-                }}>Check Out My Work</Button>
+                    fontFamily:"monospace"
+                }}>Check Out My Projects</Button>
             </Zoom>
         </Scroll>
     </Box>

@@ -1,0 +1,15 @@
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --primary-color: #333;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .button {
+    background-color: var(--primary-color);
+  }
+  

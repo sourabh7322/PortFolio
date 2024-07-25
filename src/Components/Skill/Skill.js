@@ -30,7 +30,7 @@ const Skill = () => {
       <Box sx={{ borderTop: "2px solid rgb(35,53,84)", position: "relative" }} >
         <Zoom in={checked2}>
 
-          <Typography className='skillHeading' variant='h4' sx={{ color: "#00FF41", backgroundColor: "rgb(11,24,47)", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Skills</Typography>
+          <Typography className='skillHeading' variant='h4' sx={{ color: "#bfd94a", backgroundColor: "#0b0217", position: "absolute", top: "-25px", left: "41%", padding: "0% 5% 0% 5%", fontFamily: "Poppins" }} >Skills</Typography>
         </Zoom>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center", marginTop: "5%", flexWrap: "wrap", rowGap: "5px" }}>
