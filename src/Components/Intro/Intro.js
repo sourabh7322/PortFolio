@@ -51,7 +51,7 @@ const Intro = () => {
             <Typography id="subHeading" className='heading1' sx={{color:"#bfd94a",fontFamily:"monospace",fontSize:"4rem"}} variant='h1'></Typography>
         </Zoom>
         <Zoom  in={checked}>
-            <Typography id="user-detail-intro" className='intro' sx={{color:"#bfd94a",fontFamily:"monospace",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I’m a Full Stack Web Developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products.</Typography>
+            <Typography id="user-detail-intro" className='intro' sx={{color:"#bfd94a",fontFamily:"monospace",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I am a dedicated Full Stack Developer with a passion for crafting robust and user-friendly web applications. My expertise spans both front-end and back-end development, allowing me to build comprehensive solutions that address all aspects of a project. I am proficient in a variety of programming languages and frameworks, including JavaScript, Node.js, Express.js, and MongoDB.</Typography>
         </Zoom>
         <Scroll offset={-150} type="class" element={details.className[3]}>
             <Zoom in={checked}>

@@ -35,7 +35,8 @@ const Contact = () => {
                     textAlign: "center", 
                     fontWeight: "600", 
                     color: "#bfd94a", 
-                    fontFamily: "monospace" 
+                    fontFamily: "monospace",
+                    marginTop:"50px"
                 }}
             >
                 Contact Me
@@ -44,7 +45,7 @@ const Contact = () => {
             id="contactDiv" 
             sx={{ 
                 width: { xs: '90%', md: '60%' }, 
-                margin: "10% auto", 
+                margin: "10px auto", 
                 padding: "20px", 
                 backgroundColor: "#575555", 
                 borderRadius: "10px",
