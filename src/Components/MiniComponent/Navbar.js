@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import LinearDeterminate from "./ProgressComp";
 import "./Navbar.css";
 import { details } from "../../details";
-import Resume from '../../media/Resume.pdf'
+import Resume from '../../media/Resume-Sourabh.pdf'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-scroll';
 
@@ -29,7 +29,7 @@ const Navbar = ({ scrollHandle }) => {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/14LB16Br40sjMrfkeN5rYb77YTStFRpXw/view?usp=sharing", "_blank"
+      "https://drive.google.com/file/d/1YU3BRG_GkVgNS23SuSI_1rEzxE1uRqSb/view?usp=sharing", "_blank"
     );
   };
 
@@ -114,7 +114,7 @@ const Navbar = ({ scrollHandle }) => {
         }
 
         <Box className='nav-link resume' onClick={openResume}>
-          <a href={Resume} download='Resume'>
+          <a href={Resume} download='Resume-Sourabh'>
             <Button variant="outlined"
               download={Resume}
               id="resume-button-1"

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import "./About.css"
 import ProfilePic from '../../media/ProfilePic.jpg'
 import LinearDeterminate from '../MiniComponent/ProgressComp';
-import Resume from '../../media/Resume.pdf';
+import Resume from '../../media/Resume-Sourabh.pdf';
 
 const About = () => {
     const [checked1, setChecked1] = useState(false);
@@ -25,7 +25,7 @@ const About = () => {
 
     const openResume = () => {
         window.open(
-            "https://drive.google.com/file/d/14LB16Br40sjMrfkeN5rYb77YTStFRpXw/view?usp=sharing",
+            "https://drive.google.com/file/d/1YU3BRG_GkVgNS23SuSI_1rEzxE1uRqSb/view?usp=sharing",
             "_blank"
         );
     };
@@ -46,7 +46,7 @@ const About = () => {
                         After my graduation, I discovered <span style={{ color: "#00FF41" }}>Web Development</span> and started my journey from there. Fast-forward to today, and I’ve worked on many projects with various tech stacks like JavaScript, Node.js, Express.js, and MongoDB. My main focus these days is building accessible and inclusive products. I'm an enthusiastic Full Stack Developer, a lifelong learner, and skilled in front-end Web Development with high adaptability to learn new technologies and attention to detail.
                     </Typography>
                     <Box id="resumeBtn" onClick={openResume} marginTop='1.5rem' sx={{ display: "flex", justifyContent: "center" }}>
-                        <Button variant="outlined" href={Resume} download="Resume" id="resume-button-2" sx={{ border: "1px solid #008F11", color: "#00FF41", fontSize: "0.8rem", fontFamily: "Poppins", margin: "auto" }}>Resume</Button>
+                        <Button variant="outlined" href={Resume} download="Resume-Sourabh" id="resume-button-2" sx={{ border: "1px solid #008F11", color: "#00FF41", fontSize: "0.8rem", fontFamily: "Poppins", margin: "auto" }}>Resume</Button>
                         <LinearDeterminate color={"transparent"} />
                     </Box>
                 </Box>

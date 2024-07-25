@@ -123,15 +123,6 @@ export const details={
             img: Tanishque,
             description:"This project is a clone of the Tanishq, a popular retail store which gives accessories and Jewellery. The goal of this project is to recreate the visual layout."
         },
-        {
-            name:"World Heath Organization",
-            github:"https://github.com/Junaidify/cw-web-204?tab=readme-ov-file",
-            live:"https://65db52b932ace3e41ed6fa9a--vermillion-genie-5355f3.netlify.app/",
-            type:"Collaborative",
-            tech:["HTML","CSS"],
-            img: WHO,
-            description:"We clone WHO because it promotes health and awareness on the global stage, providing technical support to countries, and monitoring and assessing health trends and outcomes worldwide."
-        }
 
     ]
 
