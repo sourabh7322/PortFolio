@@ -15,7 +15,7 @@ export const ThemeProvider = ({ children }) => {
     const root = document.documentElement;
 
     if (darkMode) {
-      root.style.setProperty('--background-color', '#333');
+      root.style.setProperty('--background-color', 'black');
       root.style.setProperty('--text-color', '#fff');
       root.style.setProperty('--primary-color', '#bfd94a');
     } else {

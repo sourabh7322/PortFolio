@@ -52,8 +52,8 @@ const Work = () => {
                                                     <Typography className="project-title" sx={{ color: "#00D837", fontFamily: "monospace" }} variant='h5'>{ele.name}</Typography>
                                                 </a>
                                                 <Box className='iconBox' sx={{ display: "flex", justifyContent: "space-between", width: "14%" }}>
-                                                    <a className="project-github-link" style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.3rem" }} href={ele.github} target={"_blank"} ><i className="fa-brands fa-github"></i></a>
-                                                    <a className="project-deployed-link" style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.3rem" }} href={ele.live} target={"_blank"} ><i className="fa-solid fa-globe"></i></a>
+                                                    <a className="project-github-link" style={{ textDecoration: "none", color: "#bfd94a", fontSize: "1.3rem" }} href={ele.github} target={"_blank"} ><i className="fa-brands fa-github"></i></a>
+                                                    <a className="project-deployed-link" style={{ textDecoration: "none", color: "#00FF41", fontSize: "1.3rem" }} href={ele.live} target={"_blank"} ><i className="fa-solid fa-globe" style={{color:"#bfd94a"}}></i></a>
                                                 </Box>
                                             </Box>
                                             <Typography sx={{ color: "#AEF359", marginTop: "10px", fontSize: "1.1rem" }} >{ele.type} Project</Typography>
