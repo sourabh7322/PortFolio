@@ -34,7 +34,7 @@ const Navbar = ({ scrollHandle }) => {
 
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1YU3BRG_GkVgNS23SuSI_1rEzxE1uRqSb/view?usp=sharing", "_blank"
+      "https://drive.google.com/file/d/1o0JzAGzA9NvrzWXilvzDPX-S7PDmbRCT/view?usp=sharing", "_blank"
     );
   };
 
