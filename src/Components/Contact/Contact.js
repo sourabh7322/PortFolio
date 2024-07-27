@@ -1,10 +1,12 @@
 import { Box, Button, TextField, Typography, InputLabel } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import emailjs from 'emailjs-com';
 import "./Contact.css";
+import { ThemeContext } from '../../ThemeContext';
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const { darkMode, toggleTheme } = useContext(ThemeContext);
 
     const handleChange = (e) => {
         setFormData({
@@ -47,11 +49,37 @@ const Contact = () => {
                     width: { xs: '90%', md: '60%' }, 
                     margin: "10px auto", 
                     padding: "20px", 
-                    backgroundColor: "#333", 
+                    backgroundColor: darkMode ? "black" : "#fff",
                     borderRadius: "10px",
                     boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
                 }}
             >
+                <Box 
+                    sx={{ 
+                        display: 'flex', 
+                        flexDirection: 'column', 
+                        alignItems: 'center', 
+                        marginBottom: '20px',
+                        color: darkMode ? "#fff" : "#333",
+                        fontFamily: "monospace"
+                    }}
+                >
+                    <InputLabel 
+                        htmlFor="email" 
+                        sx={{ display: 'flex', alignItems: 'center', marginBottom: '10px',color: darkMode ? "#fff" : "#333" }}
+                    >  
+                        <i className="fa-solid fa-envelope" style={{ marginRight: '10px' }}></i>
+                        Email: sourabhrawat77200@gmail.com
+                    </InputLabel>
+                    <InputLabel 
+                        htmlFor="phone" 
+                        sx={{ display: 'flex', alignItems: 'center',color: darkMode ? "#fff" : "#333" }}
+                    >
+                        <i className="fa-solid fa-phone" style={{ marginRight: '10px' }}></i>
+                        Phone number: 7906834867
+                    </InputLabel>
+                </Box>
+
                 <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
                     <InputLabel 
                         htmlFor="name" 
@@ -159,28 +187,6 @@ const Contact = () => {
                         Send
                     </Button>
                 </Box>
-                <Typography 
-                    variant='body1' 
-                    sx={{ 
-                        color: "#fff", 
-                        marginTop: "20px", 
-                        textAlign: "center",
-                        fontFamily: "monospace"
-                    }}
-                >
-                    Phone: 7906834867
-                </Typography>
-                <Typography 
-                    variant='body1' 
-                    sx={{ 
-                        color: "#fff", 
-                        marginTop: "10px", 
-                        textAlign: "center",
-                        fontFamily: "monospace"
-                    }}
-                >
-                    Email: sourabhrawat77200@gmail.com
-                </Typography>
             </Box>
         </>
     );
