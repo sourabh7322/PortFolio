@@ -1,11 +1,14 @@
 import { Box, Button, Slide, Typography, Zoom } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useContext} from 'react'
 import { details } from '../../details';
 import LinearDeterminate from '../MiniComponent/ProgressComp';
 import "./Intro.css"
 import Typewriter from 'typewriter-effect/dist/core'
 import Scroll from "react-scroll-to-element";
+import { ThemeContext } from '../../ThemeContext';
 const Intro = () => {
+  const { darkMode, toggleTheme } = useContext(ThemeContext); // Access context values
+
     const [checked,setChecked]= useState(false);
     const [hoverEffect,SetHoverEffect]=useState(0);
 
@@ -38,7 +41,7 @@ const Intro = () => {
         <Box className='headingContainer' sx={{cursor:"pointer",width:"fit-content"}} onMouseOut={()=>{SetHoverEffect(0)}} onMouseOver={()=>SetHoverEffect(1)}>
             <Zoom  in={checked}>
                 {/* <Typography className="heading1" sx={{color:"rgb(191,201,232)",fontFamily:"Poppins",fontSize:"6rem",fontWeight:'600'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography> */}
-                <Typography id="user-detail-name" className="heading1" sx={{color:"#00FF41",fontFamily:"Poppins",fontSize:"7rem",fontWeight:'800'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography>
+                <Typography id="user-detail-name" className="heading1" sx={{ color: darkMode ? "#fff" : "#333",fontFamily:"Poppins",fontSize:"7rem",fontWeight:'800'}} variant='h1' >{details.firstname+" "+details.lastname}</Typography>
                 
             </Zoom>
             
@@ -48,10 +51,10 @@ const Intro = () => {
             
             /> */}
             {/* <Typography id="subHeading" className='heading1' sx={{color:"rgb(136,146,176)",fontFamily:"Poppins",fontSize:"4rem"}} variant='h1'></Typography> */}
-            <Typography id="subHeading" className='heading1' sx={{color:"#00FF41",fontFamily:"monospace",fontSize:"4rem"}} variant='h1'></Typography>
+            <Typography id="subHeading" className='heading1' sx={{ color: darkMode ? "#fff" : "#333",fontFamily:"monospace",fontSize:"4rem"}} variant='h1'></Typography>
         </Zoom>
         <Zoom  in={checked}>
-            <Typography id="user-detail-intro" className='intro' sx={{color:"#00FF41",fontFamily:"monospace",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I am a dedicated Full Stack Developer with a passion for crafting robust and user-friendly web applications. My expertise spans both front-end and back-end development, allowing me to build comprehensive solutions that address all aspects of a project. I am proficient in a variety of programming languages and frameworks, including JavaScript, Node.js, Express.js, and MongoDB.</Typography>
+            <Typography id="user-detail-intro" className='intro' sx={{ color: darkMode ? "#fff" : "#333",fontFamily:"monospace",width:"65%",marginTop:"2%",fontSize:"1.4rem"}} variant='h5'>I am a dedicated Full Stack Developer with a passion for crafting robust and user-friendly web applications. My expertise spans both front-end and back-end development, allowing me to build comprehensive solutions that address all aspects of a project. I am proficient in a variety of programming languages and frameworks, including JavaScript, Node.js, Express.js, and MongoDB.</Typography>
         </Zoom>
         <Scroll offset={-150} type="class" element={details.className[3]}>
             <Zoom in={checked}>

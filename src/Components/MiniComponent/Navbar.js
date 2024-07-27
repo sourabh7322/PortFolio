@@ -73,7 +73,7 @@ const Navbar = ({ scrollHandle }) => {
           display: "flex",
           alignItems: "center",
           gap: "5px",
-          color: darkMode ? "#00FF41" : "#333", // Color based on theme
+          color: darkMode ? "#fff" : "#333", // Color based on theme
         }}
       >
         <Typography sx={{ fontFamily: "monospace", fontSize: "2rem", fontWeight: '500', textShadow: darkMode ? "0 10px 10px white" : "0 10px 10px black" }} variant='h1'>
@@ -109,7 +109,7 @@ const Navbar = ({ scrollHandle }) => {
                   onMouseOut={() => setHoverEffect(0)}
                   onMouseOver={() => setHoverEffect(index + 1)}
                 >
-                  <Typography className={ele?.val2} variant="h5" sx={{ fontSize: "1.1rem", fontFamily: "monospace", color: darkMode ? '#00FF41' : '#333' }}>{ele.val1}</Typography>
+                  <Typography className={ele?.val2} variant="h5" sx={{ fontSize: "1.1rem", fontFamily: "monospace", color: darkMode ? '#fff' : '#333' }}>{ele.val1}</Typography>
                   {hoverEffect === index + 1 ? (
                     <LinearDeterminate color={"white"} />
                   ) : (
@@ -127,8 +127,8 @@ const Navbar = ({ scrollHandle }) => {
               download={Resume}
               id="resume-button-1"
               sx={{
-                border: darkMode ? "1px solid #70d94a" : "1px solid #333",
-                color: darkMode ? "#00FF41" : "#333",
+                border: darkMode ? "1px solid #fff" : "1px solid #333",
+                color: darkMode ? "#fff" : "#333",
                 fontSize: "0.8rem",
                 fontFamily: "monospace",
               }}>Resume</Button>
@@ -137,7 +137,7 @@ const Navbar = ({ scrollHandle }) => {
           <LinearDeterminate color={"transparent"} />
         </Box>
 
-        <Box className="ham" sx={{ display: "none", color: darkMode ? "#70d94a" : "#333" }} >
+        <Box className="ham" sx={{ display: "none", color: darkMode ? "#fff" : "#333" }} >
           <MenuOutlinedIcon onClick={handleDrawerToggle} />
           <Drawer
             sx={{
@@ -145,7 +145,7 @@ const Navbar = ({ scrollHandle }) => {
               flexShrink: 0,
               '& .MuiDrawer-paper': {
                 width: 300,
-                backgroundColor: darkMode ? '#00FF41' : '#fff',
+                backgroundColor: darkMode ? '#fff' : '#fff',
                 color: darkMode ? '#bfd94a' : '#333',
               },
             }}
@@ -174,7 +174,7 @@ const Navbar = ({ scrollHandle }) => {
           </Drawer>
         </Box>
 
-        <IconButton sx={{ ml: 1, color: darkMode ? "#70d94a" : "#333" }} onClick={toggleTheme}>
+        <IconButton sx={{ ml: 1, color: darkMode ? "#fff" : "#333" }} onClick={toggleTheme}>
           {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
         </IconButton>
       </Box>
