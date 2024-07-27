@@ -66,14 +66,14 @@ const Contact = () => {
                 >
                     <InputLabel 
                         htmlFor="email" 
-                        sx={{ display: 'flex', alignItems: 'center', marginBottom: '10px',color: darkMode ? "#fff" : "#333" }}
+                        sx={{ display: 'flex', alignItems: 'center', marginBottom: '10px',color: darkMode ? "#fff" : "#333",fontFamily: "monospace",fontSize: "1.5rem", fontWeight: '500' }}
                     >  
                         <i className="fa-solid fa-envelope" style={{ marginRight: '10px' }}></i>
                         Email: sourabhrawat77200@gmail.com
                     </InputLabel>
                     <InputLabel 
                         htmlFor="phone" 
-                        sx={{ display: 'flex', alignItems: 'center',color: darkMode ? "#fff" : "#333" }}
+                        sx={{ display: 'flex', alignItems: 'center',color: darkMode ? "#fff" : "#333" ,fontFamily: "monospace",fontSize: "1.5rem", fontWeight: '500'}}
                     >
                         <i className="fa-solid fa-phone" style={{ marginRight: '10px' }}></i>
                         Phone number: 7906834867
@@ -83,7 +83,7 @@ const Contact = () => {
                 <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
                     <InputLabel 
                         htmlFor="name" 
-                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace" }}
+                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace",fontSize: "1.5rem", fontWeight: '500' }}
                     >
                         Name
                     </InputLabel>
@@ -112,7 +112,7 @@ const Contact = () => {
                     />
                     <InputLabel 
                         htmlFor="email" 
-                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace" }}
+                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace",fontSize: "1.5rem", fontWeight: '500' }}
                     >
                         Email
                     </InputLabel>
@@ -142,7 +142,7 @@ const Contact = () => {
                     />
                     <InputLabel 
                         htmlFor="message" 
-                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace" }}
+                        sx={{ color: "#00FF41", marginBottom: "5px", fontFamily: "monospace",fontSize: "1.5rem", fontWeight: '500' }}
                     >
                         Message
                     </InputLabel>
@@ -153,9 +153,9 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         multiline
-                        rows={4}
+                        rows={3}
                         sx={{ 
-                            mb: 3, 
+                            mb: 2, 
                             backgroundColor: '#fff', 
                             borderRadius: "5px",
                             '& .MuiOutlinedInput-root': {
