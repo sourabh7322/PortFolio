@@ -27,7 +27,7 @@ const About = () => {
 
     const openResume = () => {
         window.open(
-            "https://drive.google.com/file/d/1o0JzAGzA9NvrzWXilvzDPX-S7PDmbRCT/view?usp=sharing",
+            "https://drive.google.com/file/d/1QobwFs1Qpj78CZhoq4_L6EB7awVNa-eM/view?usp=sharing",
             "_blank"
         );
     };
